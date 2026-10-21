@@ -1,0 +1,14 @@
+[project]
+name = "directory-atomic-remover"
+version = "0.1.0"
+description = "Atomically swaps a directory for an empty one and deletes the old tree in the background"
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
