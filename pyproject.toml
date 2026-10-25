@@ -1,6 +1,6 @@
 [project]
 name = "directory-atomic-remover"
-version = "0.1.0"
+version = "0.1.1"
 description = "Atomically swaps a directory for an empty one and deletes the old tree in the background"
 requires-python = ">=3.10"
 dependencies = []
