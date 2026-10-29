@@ -30,3 +30,10 @@ The trade-off: deletion runs in a daemon thread and is fire-and-forget. If the p
 ## Example
 
 The example above creates the target directory with ``os.makedirs`` before passing it to ``AtomicRemover``. If the path does not exist, ``replace()`` raises ``AtomicRemoverError``.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
